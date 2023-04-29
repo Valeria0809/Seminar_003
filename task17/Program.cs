@@ -12,12 +12,18 @@
     //return = Convert.ToInt32(Console.ReadLine());
 //}
 
+int [] coords = new int [2];
+coords [0] = ReadInt("Введите кооринату точки X: ");
+coords [1] = ReadInt("Введите кооринату точки Y: ");
+string[] str = {"Точка лежит в первой четверти", "Точка лежит во второй четверти", "Точка лежит в третьей четверти", "Точка лежит в четвертой четверти", "Точка лежит на одной из осей"};
+CheckQuarter(coords, str);
 
 int ReadInt(string text)
 {
     System.Console.Write(text);
     return Convert.ToInt32(Console.ReadLine());
 }
+
 void CheckQuarter(int[] array, string[] print);
 
 if(array [0] > 0 && array [1] > 0)
